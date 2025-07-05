@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavourTrek - My Passport</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="page-passport">
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">FlavourTrek</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link" data-page="spin">Spin</a></li>
+                    <li><a href="flavours.html" class="nav-link" data-page="flavours">Flavours</a></li>
+                    <li><a href="passport.html" class="nav-link active" data-page="passport">My Passport <img src="images/suitcase.png" alt="Suitcase" class="suitcase-icon"><span id="suitcaseCount">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main class="container passport-container-main">
+    <div class="passport-card">
+        <div class="passport-header">
+            <h1 class="passport-title">Flavor Passport</h1>
+        </div>
+<div class="passport-body">
+    <div class="certificate-top-banner">
+        <div class="certificate-badge">2020 AWARD</div>
+        <h2 class="certificate-main-title">FOOD EXPLORER PASSPORT</h2>
+        <div class="company-logo-placeholder">FLAVOURTREK</div>
+    </div>
+
+    <div class="certificate-main-content-area">
+        <p class="certificate-preamble">PROUDLY PRESENTED TO</p>
+        <input type="text" id="explorerNameInput" class="user-name-input" placeholder="Your Explorer Name" value="Culinary Explorer">
+        <p class="certificate-description">For demonstrating exceptional dedication and taste in navigating the world's cuisines. This passport certifies your extraordinary journey through diverse culinary landscapes, collecting unique flavors and expanding your palate with every mile traveled.</p>
+    </div>
+
+    <div class="certificate-details-grid">
+        <div class="taste-personality-section certificate-detail-block">
+        
+            <div class="personality-details">
+                <img id="tasteCharacter" src="images/default.png" alt="Taste Character Avatar">
+                <div class="cuisine-miles">
+                    <p id="cuisineMilesValue">0</p>
+                    <p class="label">Cuisine Miles</p>
+                </div>
+            </div>
+            <div class="mood-tags-container">
+                <p class="label">Top Flavor Tags</p>
+                <div class="tag-list" id="moodTags">
+                    </div>
+            </div>
+        </div>
+
+        <div class="user-profile-section certificate-detail-block">
+            <p class="section-title">Your Collected Dishes</p>
+            <ul id="dishesCollectedList" class="dish-list">
+                </ul>
+        </div>
+    </div>
+</div>
+<button id="downloadPassportBtn" class="btn primary-btn download-btn">
+    Download <img src="images/download.png" alt="Download" class="download-icon">
+</button>
+        </div>
+    </div>
+</main>
+    </main>
+    
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

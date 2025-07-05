@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavourTrek - Spin the Wheel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="page-spin">
+
+    <header>
+        <div class="header-container container">
+            <a href="index.html" class="logo">FlavourTrek</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active" data-page="spin">Spin</a></li>
+                    <li><a href="flavours.html" class="nav-link" data-page="flavours">Flavours</a></li>
+                   <li><a href="passport.html" class="nav-link" data-page="passport">My Passport <img src="images/suitcase.png" alt="Suitcase" class="suitcase-icon"><span id="suitcaseCount">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Unlock Your Next Culinary Adventure!</h1>
+                    <p>Explore a world of flavors! Spin the wheel to discover exciting dishes, learn fun facts, and build your unique culinary passport. Get ready to embark on your FlavourTrek!</p>
+                    <button class="btn primary-btn" id="exploreFlavoursBtn">Browse All Flavours</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="wheel-section">
+            <div class="container">
+                <h2>Feeling Lucky? Spin the Wheel!</h2>
+                <p>Let fate decide your next delicious meal! Get a random dish recommendation from our vast collection.</p>
+                <div class="wheel-container">
+                    <div class="wheel-pointer"></div>
+                    <div class="wheel" id="wheel">
+                        </div>
+                    <button class="btn spin-btn" id="spinBtn">SPIN!</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Dish Image">
+            </div>
+            <div class="modal-text-content">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div id="feedbackMessage" class="feedback-message"></div>
+                <div id="optionsContainer" class="options-container">
+                    </div>
+                <div id="recipeContent" class="recipe-content hidden">
+                    <h3 id="recipeTitle"></h3>
+                    <pre id="recipeText"></pre>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="modalActionBtn" class="btn primary-btn hidden"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavourTrek - Explore Flavours</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="page-flavours">
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">FlavourTrek</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link" data-page="spin">Spin</a></li>
+                    <li><a href="flavours.html" class="nav-link active" data-page="flavours">Flavours</a></li>
+                    <li><a href="passport.html" class="nav-link" data-page="passport">My Passport <img src="images/suitcase.png" alt="Suitcase" class="suitcase-icon"><span id="suitcaseCount">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container flavours-section">
+        <h1>Explore Global Flavours</h1>
+        <p>Browse through an array of delicious dishes from around the world. Find your favorites and add them to your culinary suitcase!</p>
+        
+        <div class="search-filter-container">
+            <input type="text" id="searchBar" placeholder="Search for dishes by name or origin...">
+            <div id="filterTags" class="filter-tags">
+                </div>
+        </div>
+
+        <div id="dishGrid" class="dish-grid">
+            </div>
+
+       <a href="passport.html" class="btn primary-btn" id="viewPassportBtn">View My Passport</a>
+    </main>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Dish Image">
+            </div>
+            <div class="modal-text-content">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div id="feedbackMessage" class="feedback-message"></div>
+                <div id="optionsContainer" class="options-container hidden"></div> 
+                <div id="recipeContent" class="recipe-content">
+                    <h3 id="recipeTitle"></h3>
+                    <pre id="recipeText"></pre>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="modalActionBtn" class="btn primary-btn"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
